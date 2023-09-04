@@ -1,9 +1,34 @@
 # Extended ToDo list
 
+## Project Structure
+
+```
+.
+├── .env                   # Environment variables for the project
+├── .gitignore.py          # A list of files and directories to ignore in Git version control
+├── docker-compose.yml     # Docker Compose configuration for deployment
+└── app
+    ├── api                # APP - API
+    |   └── ...       
+    ├── users              # APP - USERS
+    |   └── ...       
+    ├── tasks              # APP - TASKS
+    |   └── ...
+    ├── send_emails        # email server for token receipt
+    |   └── ...
+    ├── tests              # A few tests 
+    |   └── ...             
+    ├── Dockerfile         # Dockerfile for building application image
+    ├── requirements.txt   # Project dependencies
+    ├── manage.py          # Command-line interface for managing the application (migrations, etc) 
+    ├── pytest.ini         # Configuration file for pytest (testing framework)
+
 
 ## Technologies Used
+* Python 3.10 or later
 * Django
 * Docker
+* Docker Compose
 * Nginx
 * Django Rest Framework
 * PostgreSQL
@@ -51,3 +76,18 @@ The project is now available at http://127.0.0.1/.
 
 ## Tests
 
+1. Ensure that the Docker containers are running. If they aren't, start them by running the following command from the extended_todo_list/app directory:
+```bash
+docker-compose up
+```
+
+2. Run the tests using the following command:
+```bash
+docker-compose exec backend pytest
+```
+
+3. Once the tests are complete, you should see the test results output in the terminal.
+
+## Contributing
+
+If you have any questions, suggestions, requests, or comments, please feel free to open [issues or pull requests](https://github.com/EvgVol/extended_todo_list/issues) in this repository.
