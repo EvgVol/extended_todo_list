@@ -9,9 +9,7 @@ services:
       - ./.env
 
   backend:
-    build:
-      context: ./app
-      dockerfile: Dockerfile
+    image: evol93/todo_list:latest
     restart: always
     volumes:
       - static_value:/app/static/
