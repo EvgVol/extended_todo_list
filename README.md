@@ -21,7 +21,7 @@
     ├── Dockerfile         # Dockerfile for building application image
     ├── requirements.txt   # Project dependencies
     ├── manage.py          # Command-line interface for managing the application (migrations, etc) 
-    ├── pytest.ini         # Configuration file for pytest (testing framework)
+    └── pytest.ini         # Configuration file for pytest (testing framework)
 
 
 ## Technologies Used
