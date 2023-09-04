@@ -27,7 +27,7 @@ DB_ENGINE='django.db.backends.postgresql'
 DB_NAME='postgres'
 POSTGRES_USER='postgres'
 POSTGRES_PASSWORD='postgres'
-DB_HOST='127.0.0.1'
+DB_HOST='db'
 DB_PORT=5432
 ```
 4. Navigate to the project directory using:
@@ -41,9 +41,9 @@ docker-compose up
 6. Execute the commands one by one:
 
 ```bash
-sudo docker-compose exec web python manage.py migrate
-sudo docker-compose exec web python manage.py createsuperuser
-sudo docker-compose exec web python manage.py collectstatic --no-input
+docker-compose exec backend python manage.py migrate
+docker-compose exec backend python manage.py createsuperuser
+docker-compose exec backend python manage.py collectstatic --no-input
 ```
 
 The project is now available at http://127.0.0.1/.
