@@ -22,7 +22,7 @@
     ├── requirements.txt   # Project dependencies
     ├── manage.py          # Command-line interface for managing the application (migrations, etc) 
     └── pytest.ini         # Configuration file for pytest (testing framework)
-
+```
 
 ## Technologies Used
 * Python 3.10 or later
