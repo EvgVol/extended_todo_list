@@ -1,3 +1,4 @@
+import os
 from datetime import timedelta
 from pathlib import Path
 
@@ -116,6 +117,7 @@ SIMPLE_JWT = {
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH =  BASE_DIR / 'send_emails'
 DEFAULT_FROM_EMAIL = 'todo@example.com'
+
 AUTH_USER_MODEL = 'users.User'
 
 LANGUAGE_CODE = 'ru-Ru'

@@ -108,7 +108,6 @@ class Test00UserRegistration:
             f'создается пользователь и возвращается статус {code}'
         )
 
-        # Test confirmation code
         assert len(outbox_after) == outbox_before_count + 1, (
             f'Проверьте, что при {request_type} запросе `{self.url_signup}` с валидными данными, '
             f'пользователю приходит email с кодом подтверждения'

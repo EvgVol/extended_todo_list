@@ -79,6 +79,46 @@ docker-compose exec backend python manage.py collectstatic --no-input
 The project is now available at http://127.0.0.1/.
 
 
+7. Sig Up & Auth users 
+
+*The project is designed to authenticate users via a token, which is obtained upon registration and stored in the 'send_emails' folder. To view the email, follow the procedure below:*
+
+* 1. Open a new terminal if the current terminal is busy with "docker-compose up".
+
+* 2. Find the container ID for your backend using the command:
+```
+docker ps
+```
+* 3. Locate your container by name, which will likely be in the form <directory_name>_backend_1. Write down its CONTAINER ID.
+
+* 4. Connect to the container with the backend using the container ID:
+```bash
+docker exec -it <CONTAINER_ID> bash
+# Replace <CONTAINER_ID> with the previously found container identifier.
+```
+
+* 5. Now you are inside the container. Change to the send_emails directory:
+```
+cd send_emails
+```
+* 6. List the files:
+```
+ls -l
+```
+* 7. You need to find the last created file with messages. Files created earlier will have older timestamps. Use the cat command to view the contents of the file:
+```
+cat <email_file_name>
+```
+* 8. Replace <email_file_name> with the name of the file with the last saved messages.
+
+* 9. Now you can view the message with the registration confirmation code. You can use this code to test the operation of the application in Postman. 
+
+P.S. Don't forget to specify `Beurer` in Value Headers. Something like this:
+
+```bash
+Bearer eyJhbGciOiJIUz.eyJ0154513bl90eXBlTA2ODYGkiOiJjNzIwM2UzNiIsInVzZXJfaWQiOjF9.rqXbs3H3tu0V9MLN72I_MdIHkXqFHw
+```
+
 ## Tests
 
 1. Ensure that the Docker containers are running. If they aren't, start them by running the following command from the extended_todo_list/app directory:

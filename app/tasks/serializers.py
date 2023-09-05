@@ -12,7 +12,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class TaskSerializer(serializers.ModelSerializer):
 
     user = serializers.SlugRelatedField(
-            slug_field='username', read_only=True, many=False, )
+            slug_field='username', read_only=True)
 
     class Meta:
         model = Task
