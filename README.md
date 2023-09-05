@@ -16,7 +16,7 @@
     |   └── ...       
     ├── tasks              # APP - TASKS
     |   └── ...
-    ├── send_emails        # email server for token receipt
+    ├── send_emails        # Email server for token receipt
     |   └── ...
     ├── tests              # A few tests 
     |   └── ...
@@ -30,13 +30,14 @@
 
 ## Technologies Used
 * Python 3.10 or later
-* Django
+* Django 4.2
+* Django Rest Framework 3.14
+* PostgreSQL 13.0
+* PyTest 7.4
+* Gunicorn 21.2
 * Docker
 * Docker Compose
 * Nginx
-* Django Rest Framework
-* PostgreSQL
-* Gunicorn
 
 ## Installation
 To install and run the project locally, follow these steps:
