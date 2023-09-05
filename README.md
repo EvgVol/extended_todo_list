@@ -7,6 +7,8 @@
 ├── .env                   # Environment variables for the project
 ├── .gitignore.py          # A list of files and directories to ignore in Git version control
 ├── docker-compose.yml     # Docker Compose configuration for deployment
+├── data                   # Special folder for web server settings
+|   └── nginx
 └── app
     ├── api                # APP - API
     |   └── ...       
